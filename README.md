@@ -1,56 +1,72 @@
-Usage: 
+# 🧾 Invoice Generator (Tkinter + ReportLab)
 
--- Seller Info: Edit the multi-line text box at the top left to enter your company's full details (this goes into the PDF).
+### 💡 Overview
+A modern desktop-based **Invoice Generator** built using **Python (Tkinter + ReportLab)**.  
+It features a sleek user interface, automatic invoice numbering, real-time tax and total calculation, and integrated PDF preview & printing.
 
--- Buyer Details: Enter the client's name and address.
+---
 
--- Invoice Details: Check the Invoice No. and Date. The Invoice No. automatically increments after a PDF is generated.
+## ⚙️ Usage Guide
 
--- Add Items: Click the ➕ Add Item button to open a dialog where you can enter the description, quantity, and unit price for an item. Double-click an item in the list to edit it.
+### 🏢 Seller Info
+- Edit the **multi-line text box (top-left corner)** to enter your company’s details.  
+  *(These details will automatically appear in the generated PDF.)*
 
--- Tax Rate: Enter the desired tax percentage (e.g., 18.0) in the "Summary" box. Totals update instantly.
+### 👤 Buyer Details
+- Enter the **client’s name and address** in the provided fields.
 
-Actions:
+### 📅 Invoice Details
+- **Invoice No.** and **Date** are displayed automatically.  
+- The **Invoice Number** increments automatically after each PDF generation.
 
--- 💾 Generate & Save PDF: Creates the final PDF, saves it to the invoices folder, and records the transaction in the CSV log.
+### 🧾 Add Items
+- Click **➕ Add Item** to open a dialog box.  
+- Enter **Description**, **Quantity**, and **Unit Price**.  
+- Double-click any existing item in the list to **edit** it instantly.
 
--- 🔎 Preview Invoice: Opens a separate window to view the PDF before saving.
+### 💰 Tax Rate
+- Enter your desired tax percentage (e.g., `18.0`) in the **Summary Box**.  
+- All totals update **instantly** as you modify values.
 
--- 🖨️ Print Invoice: Saves the PDF and attempts to send it to a selected printer.
+---
 
--- 🔄 Reset All: Clears all buyer details and item lists for a new invoice.
+## 🧭 Actions
 
-Features 
+| Action | Description |
+|--------|--------------|
+| 💾 **Generate & Save PDF** | Creates and saves a professional PDF in the `/invoices` folder and logs it in a CSV file. |
+| 🔎 **Preview Invoice** | Opens a **preview window** to view the invoice before saving. |
+| 🖨️ **Print Invoice** | Saves the PDF and sends it to a **selected printer** automatically. |
+| 🔄 **Reset All** | Clears all buyer details and item lists for a **fresh invoice**. |
 
--- Modern UI/UX: A clean, multi-pane layout styled with a clam theme and enhanced colors for a modern, layered look.
+---
 
--- Clear Financial Breakdown: The generated PDF clearly labels Subtotal, Tax ($\dots\%$) and GRAND TOTAL for professional invoicing.
+## 🌟 Features
 
--- Item Management: Easily add, edit, and remove line items from the invoice.
+- 🖥️ **Modern UI/UX** — Clean, multi-pane layout styled with the *clam theme* and enhanced modern colors.  
+- 📊 **Financial Breakdown** — Professional invoice design with **Subtotal, Tax, and Grand Total** sections.  
+- ✏️ **Item Management** — Add, edit, or remove line items easily.  
+- ⚡ **Auto Calculations** — Real-time tax and total updates as you modify items or rates.  
+- 📄 **PDF Generation** — High-quality, print-ready invoices using **ReportLab**.  
+- 📈 **Invoice Tracking** — Automatically logs key details (invoice no., date, buyer, total) into `records.csv`.  
+- 👁️ **Preview & Print** — Built-in invoice preview and direct printing feature.  
+- 🔢 **Auto Numbering** — Invoice numbers increment automatically after each generation.  
 
--- Automatic Calculation: Calculates Tax Amount and Grand Total in real-time based on the item list and specified tax rate.
+---
 
--- PDF Generation: Uses ReportLab to create high-quality, print-ready PDF invoices.
+## 🚀 How to Run
 
--- Invoice Tracking: Automatically saves essential invoice details (number, date, buyer, total) to a CSV file for record-keeping.
+### 🪟 For Windows Users
 
--- Preview & Print: Includes features to preview the generated PDF before saving/printing and a utility to send the invoice directly to a printer.
+```bash
+# Step 1: Create a virtual environment
+python -m venv .env
 
--- Automatic Numbering: Automatically increments the invoice number for new invoices.
+# Step 2: Activate the virtual environment
+.env\Scripts\activate
 
+# Step 3: Install dependencies
+pip install -r requirements.txt
 
-How to Run
-Navigate to the directory containing the invoice_app.py file.
-
-Execute the script using Python:
-
-"Bash"
-
--- python -m venv .env (Tip this is for Windows User)
-
--- .env\Scripts\activate
-
--- pip install -r requirements.txt
-
--- python invoice_app.py
-
+# Step 4: Run the application
+python invoice_app.py
